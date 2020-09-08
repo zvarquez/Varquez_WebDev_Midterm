@@ -1,0 +1,82 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+</head>  
+<body>  
+
+<form> 
+ 
+  <div style="background-color: pink" class="container">  
+<h1> Student Registration Form</h1> </center>  
+  <hr>  
+  <label> <strong> &nbsp; Firstname <strong></label>   
+<input type="text" name="firstname" placeholder= "Firstname" size="25" required /> 
+    <br><br>
+<label> <strong> &nbsp; Lastname: <strong></label>    
+<input type="text" name="lastname" placeholder="Lastname" size="25"required /> 
+  
+  <br><br>
+<div>  
+<label>   
+  <strong>&nbsp;Course</strong>
+</label>   
+  
+<select>  
+<option value="Course">Select Course</option>  
+<option value="BSA">BSA</option>  
+<option value="BSAT">BSAT</option>  
+<option value="BSBA">BSBA</option>  
+<option value="BSIT">BSIT</option>
+<option value="BSIS">BSIS</option>
+<option value="BSHRM">BSHRM</option>  
+<option value="BSN">BSN</option>  
+</select> 
+  <br><br>
+</div>  
+<div>  
+<label>   
+&nbsp; Gender :  
+</label><br>
+  <br>
+<input type="radio" value="Male" name="gender" checked > Male   
+<input type="radio" value="Female" name="gender"> Female   
+<input type="radio" value="Other" name="gender"> Other  
+  
+  <br><br>
+</div>  
+<label>   
+<label> 
+ &nbsp;  Phone #: <br> 
+  </label>
+&nbsp;<input type="text" name="country code"  value="+91" size="2"/> 
+<input type="text" name="phone" size="10"/> <br> <br>
+&nbsp; Current Address :
+  <br>
+&nbsp;<textarea cols="50" rows="3" placeholder="Current Address" value="address" required>  
+</textarea> 
+  <br><br>
+ &nbsp;<label for="email"><b>Email</b></label>  
+ <input type="text" placeholder="Enter Email" name="email" required>  
+  <br><br>
+  &nbsp;<label for="psw"><b>Password</b></label>  
+    <input type="password" placeholder="Enter Password" name="psw" required>  
+  <br><br>
+   &nbsp; <label for="psw-repeat"><b>Re-type Password</b></label>  
+    <input type="password" placeholder="Retype Password" name="psw-repeat" required>  
+  
+  <br><br>
+  <input type="checkbox" 
+                   id="cbxPolicy"
+                   name="cbxPolicy"
+                   value="Accept privacy policy and terms"/>
+            <label for="cbxPolicy1">Accept privacy policy and terms</label>
+  <br><br>
+   
+  <button style="background-color: #FDAB9F" type="register" class="registerbtn">REGISTER</button>
+ <button style="background-color: #FDAB9F" type="reset" class="registerbtn">RESET </button>
+  
+  <br><br>
+</form>  
+</body>  
+</html>
