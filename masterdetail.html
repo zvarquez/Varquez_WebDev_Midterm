@@ -1,19 +1,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Master-detail pattern</title>
+    <title>Masterdetail</title>
     <meta name="viewport" content="width=device-width">
     <style>
         *.title {
     font-size: 32px;
-    border-bottom: 5px solid #4B7A90;
+    border-bottom: 5px solid black;
     padding: 15px;
     color: #4B7A90;
     
 }
 .master-item {
     font-size: 20px;
-    border-bottom: 2px solid #4B7A90;
+    border-bottom: 2px solid black;
     padding: 15px;
     background: #F4E3D7;
     color:#4B7A90; 
@@ -89,17 +89,17 @@
     }
 
     .master{
-        border-right: 5px solid #4B7A90;
+        border-right: 5px solid black;
     }
 }
     </style>
 </head>
 <body style="background-color:white">
   
-     <h1 class="title text-center">Master-Detail</h1>
+     <h1 class="title text-center">MasterDetail</h1>
     <div class="md-container">
         <div class="col-3 master">
-          <p style="color:#142b43;font-size:25px;">ACTIVITIES</p>
+          <p style="color:black;font-size:25px;">ACTIVITIES</p>
           
     <div class = "master-item" id = "reg" onclick="myFunction1()"> Registration</div>
     <div class = "master-item" id = "cal" onclick="myFunction2()"> Calendar</div>         
@@ -109,7 +109,6 @@
                   
       </div>
         <div  class="col-9 detail">
-            <button id="back-btn" class="-md" onclick="back()">< Back</button>
               
   <iframe id="myframe" width= "1100" height = "900"> </iframe>
               
