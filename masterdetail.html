@@ -1,21 +1,213 @@
 <html lang="en">
 <head>
-<body >
-    <div class="cont">
-        <div class="c-3 m">
-            <div class="m-item tit"><strong>Activities</strong></div>
-            <div class="m-item"><a href="poem.html" target="iname">Poem</a></div>
-            <div class="m-item"><a href="markup.html" target="iname">Markup</a></div>
-            <div class="m-item"><a href="wishlist.html" target="iname">Wishlist</a></div>
-            <div class="m-item"><a href="calendar.html" target="iname">Calendar</a></div>
-            <div class="m-item"><a href="registration.html" target="iname">Registration</a></div>
-            <div class="m-item"><a href="vmg.html" target="iname">VMG</a></div>
-        </div>
-        <div class="c-9 det">
-            <iframe src="poem.html" name="iname" frameborder=""height="100%" width="100%"></iframe>
+    <meta charset="UTF-8">
+    <title>Master-detail pattern</title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+        *.title {
+    font-size: 32px;
+    border-bottom: 5px solid #4B7A90;
+    padding: 15px;
+    color: #4B7A90;
+    
+}
+.master-item {
+    font-size: 20px;
+    border-bottom: 2px solid #4B7A90;
+    padding: 15px;
+    background: #F4E3D7;
+    color:#4B7A90; 
+}
+
+.text-center {
+    text-align: center;
+}
+.master-item:hover, .active-item {
+    background: #4B7A90;
+    color: white;
+    cursor: pointer
+}
+
+.master {
+    padding: 25px;
+    border:none;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.hidden-md {
+    display: inline
+}
+
+.hidden-md-down {
+    display:none
+}
+
+/* For phones: */
+[class*="col-"] {
+    width: 100%;
+    float: left;
+}
+
+.detail{
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 11;
+    color: #4B7A90;
+    height: 100vh;
+    background: #F7EDE4
+}
+
+.md-container  {
+    position: relative;
+}
+
+#back-btn {
+    color: #4B7A90;
+    border: 1px solid #4B7A90;
+    background: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#back-btn:hover {
+    cursor: pointer;
+    color: white;
+    background: #4B7A90;
+}
+
+
+/* For 786 and above: */
+@media only screen and (min-width: 768px) {
+   
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    .hidden-md {
+        display: none;
+    }
+
+    .detail {
+        position: static;
+    }
+
+    .master{
+        border-right: 5px solid #4B7A90;
+    }
+}
+    </style>
+</head>
+<body style="background-color:#F4E3D7;">
+  
+     <h1 class="title text-center">Master-Detail</h1>
+    <div class="md-container">
+        <div class="col-3 master">
+          <p style="color:#142b43;font-size:25px;">ACTIVITIES</p>
+          
+    <div class = "master-item"
+           id = "reg" onclick="myFunction1()"> Registration</div>
+    <div class = "master-item" id = "cal"
+           onclick="myFunction2()"> Calendar</div>         
+      <div class = "master-item" id = "wl"
+           onclick="myFunction3()"> Wishlist</div>   
+  <div class = "master-item" id = "mu"
+           onclick="myFunction4()"> Markup</div>
+              <div class = "master-item" id = "poem"
+           onclick="myFunction5()"> Poem</div>
+                  
+      </div>
+        <div  class="col-9 detail">
+            <button id="back-btn" class="-md" onclick="back()">< Back</button>
+              
+  <iframe id="myframe" width= "1100" height = "900"> </iframe>
+              
+       <div id="registration">
+       </div>
+          <script>
+          function myFunction1() {
+                document.getElementById("myframe").src = "registration.html"
+              }
+            </script>
+               <iframe id="myframe" 
+                 width= "1100"
+                 height = "900">
+       </iframe>
+       <div id="cale">
+       </div>
+          <script>
+          function myFunction2() {
+                document.getElementById("myframe").src = "calendar.html"
+              }
+            </script>
+               </iframe>
+       <div id="wshlst">
+       </div>
+          <script>
+          function myFunction3() {
+                document.getElementById("myframe").src = "wishlist.html"
+              }
+            </script>
+           </iframe>
+       <div id="mrkup">
+       </div>
+          <script>
+          function myFunction4() {
+                document.getElementById("myframe").src = "markup.html"
+              }
+            </script>
+       </iframe>
+       <div id="poemm">
+       </div>
+          <script>
+          function myFunction5() {
+                document.getElementById("myframe").src = "poem.html"
+              }
+            </script>
+              
+              
+              
+            
+ <script> 
+   const detail = document.querySelector('.detail');
+        const detailTitle = document.querySelector('.detail-title');
+        const masterItems = document.querySelectorAll('.master-item');
+
+        function select(selected){
+            //Remove active class from all master-items
+            for(var item of masterItems){
+                item.classList.remove('active-item');
+            }
+            //Make selected tab active
+            selected.classList.add('active-item');
+            //Toggle the class that hides when the screen is medium size or less
+            detail.classList.remove('hidden-md-down');
+            //Set the content of the detail to the innerHTML of the selected item
+            detailTitle.innerHTML = selected.innerHTML;
+        }
+
+        function back(){
+            //Remove active class from all master-items
+            for(var item of masterItems){
+                item.classList.remove('active-item');
+            }
+            detail.classList.add('hidden-md-down');
+        }
+              </script>    
         </div>
 
-    </div>
-
-    </body>
+ </body>
 </html>
