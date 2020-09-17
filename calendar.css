@@ -15,7 +15,7 @@ body{
         letter-spacing: 5px; 
         color: darkblue; 
         padding: 25px; 
-        border: 1px solid black; 
+        border: 1px solid blue; 
       }
       table, th, td {
         width: 100%; 
@@ -23,7 +23,7 @@ body{
         text-allign: center; 
         font-size: 16px; 
         border-collapse: collapse; 
-        border: 1px solid black;   
+        border: 1px solid red;   
       }
       tr, th, td {
         padding: 20px;
