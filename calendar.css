@@ -10,12 +10,12 @@ body{
       }
       .month {
         text-allign: center;
-        background-color: white;
+        background-color: #000080;
         font-size: 2.5em; 
         letter-spacing: 5px; 
         color: darkblue; 
         padding: 25px; 
-        border: 1px solid blue; 
+        border: 1px solid #FF0099; 
       }
       table, th, td {
         width: 100%; 
@@ -23,19 +23,19 @@ body{
         text-allign: center; 
         font-size: 16px; 
         border-collapse: collapse; 
-        border: 1px solid red;   
+        border: 1px solid #FF00FF;   
       }
       tr, th, td {
         padding: 20px;
       }
       th {
-        background: #CCCCFF;
+        background: #000080;
         color: #5453a6; 
       }
       td {
-        background: #7575cf; 
+        background: #000080; 
       }
       #bmonth {
         font-size: 20px;
-        background: #9EA9ED;
+        background: #000080;
       }
