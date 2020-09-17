@@ -33,7 +33,7 @@ body{
         color: #00FFFF; 
       }
       td {
-        background: #000080; 
+        background: gray; 
       }
       #bmonth {
         font-size: 20px;
