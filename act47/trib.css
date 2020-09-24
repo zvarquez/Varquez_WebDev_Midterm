@@ -1,1 +1,41 @@
+body{
+  background-color: #445a6e
+}
+  img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 400px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
 
+}
+
+td, th {
+  border: 2px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+h1{
+  color: white; 
+}
+p {
+  color: white; 
+}
+.image {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 750px; 
+}
+hr.new {
+  border: 10px solid white;
+  border-radius: 5px;
+}
