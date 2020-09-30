@@ -7,7 +7,7 @@ body {
 	height: 100%;
 }
 .blueButton {
-	background-color: #0088BB;
+	background-color: #5aac44;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
@@ -23,7 +23,7 @@ body {
 }
 
 .blueButton:hover {
-	background-color: #369cb8;
+	background-color: black;
 }
 
 .blueButton:active {
