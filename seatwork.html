@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+  <title>calculator</title>
+</head>
+  <style>
+    body{
+ background-image: linear-gradient(to right, #184e68, #65799b)
+}
+.result{
+  background: white;
+  color: black;
+  width:90%;
+  margin:8px 0px 20px 10px;
+  height:50px;
+  overflow:hidden;
+  font-family:Digital;
+  text-align:right;
+  line-height:46px;
+  padding-right:10px;
+  font-size:35px;
+}
+.numbers {
+  padding:0;
+  margin:0;
+}
+.numbers > li {
+  background: #2e3233;
+  padding:10px;
+  font-family:Share;
+  width:17%;
+  list-style:none;
+  float:left;
+  margin:5px;
+  cursor:pointer;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  box-shadow: 0 5px 0 white, 0 2px 5px rgba(0, 0, 0, .75);
+  text-align:center;
+      transition: all .07s ease;
+}
+.numbers > li:active {
+  position: relative;
+  top: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .4);
+}
+.numbers > li:last-child{
+width:65%;
+margin-top:-48px;
+}
+
+.numbers > li:nth-child(16) {  
+height:90px;
+  line-height:80px;
+}
+.calc{
+  background: #192841;
+  width:400px;
+  position:absolute;
+  top:5%;
+  left:50%;
+  margin-left:-150px;
+  padding:10px;
+  border-radius:5px;
+  height:370px;
+  text-align:center;
+  box-shadow: 0 6px 0 #a1a1a1, 0 8px 10px rgba(0, 0, 0, .75);
+}
+  </style>
+  <body>
+  <div class="calc">
+  <div class="result"></div>
+  <ul class="numbers">
+    <li>c</li>
+    <li>*</li>
+    <li>/</li>
+    <li>.</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>+</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>-</li>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>0</li>
+  </ul>
+  </div>
+  </body>
+  </html>
